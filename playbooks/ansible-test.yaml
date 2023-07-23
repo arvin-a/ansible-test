@@ -5,13 +5,6 @@
 # sudo ansible-playbook playbooks/openshift-bm-test.yaml --vault-id @prompt -i $VARSDIR/inventory -e config=$VARSDIR/main.yaml -e config_dir=$VARSDIR
 # sudo ansible-playbook playbooks/openshift-bm-test.yaml --vault-password-file vaultpass -e config=$VARSDIR/main.yaml -e config_dir=$VARSDIR -i $VARSDIR/inventory
 
-- name: Load configs
-  hosts: all:localhost
-  connection: local
-  roles:
-    - ansible-config-load
-  tags:
-    - always
 
 - name: Setup Staging Directory
   hosts: localhost
