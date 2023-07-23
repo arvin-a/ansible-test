@@ -1,0 +1,11 @@
+---
+- name: Remove staging folder if exists
+  file:
+    state: absent
+    path: "/tmp/ansible-test"
+
+- name: Create staging folder
+  file:
+    state: directory
+    path: "/tmp/ansible-test"
+
